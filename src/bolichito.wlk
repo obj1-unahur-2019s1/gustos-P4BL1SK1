@@ -1,5 +1,5 @@
 import objetos.*
-impor personas.*
+import personas.*
 object bolichito {
 	var objetoEnMostrador
 	var objetoEnVidriera
@@ -32,6 +32,6 @@ object bolichito {
 		else{return "No falta nada"}
 	}
 	method puedeOfrecerleAlgoA(persona) {
-		return objetoEnMostrador.leGusta(persona) || objetoEnVidriera.leGusta(persona)
+		return persona.leGusta(objetoEnMostrador) ||  persona.leGusta(objetoEnVidriera)
 	}
 }
